@@ -5,9 +5,12 @@ class SnakeAndLadderGame {
 	static int SnakeArr[] = { 49, 69, 99 };
 	static int TotalNoOfDiceRoll = 0;
 
+
 public static void main(String[] args){
 		System.out.println("Welcome to the snake and ladder game");
 		System.out.println("Starting position of the player is 0 !!");
+
+
 
 
 		for (playerposition = 1; playerposition <= 100; playerposition++) {
@@ -57,8 +60,14 @@ public static void main(String[] args){
 				playerposition = 98;
 				System.out.println("LUCKY!! YOU GOT A LADDER.");
 				System.out.println("YUPP!! Now, You are at " + playerposition + " position.");
-				}
+
+			} else if (playerposition > 100) {
+				playerposition = playerposition - dieRoll;
+				System.out.println("OHH!! YOU CAN'T JUMP, YOU MUST LAND ON A 100.");
+			}
 		}
 
 	}
 }
+
+
